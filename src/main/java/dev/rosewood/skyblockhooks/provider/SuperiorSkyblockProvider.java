@@ -16,7 +16,8 @@ public class SuperiorSkyblockProvider implements SkyblockProvider {
             return true;
 
         SuperiorPlayer superiorPlayer = SuperiorSkyblockAPI.getPlayer(player);
-        return island.hasPermission(superiorPlayer, IslandPrivilege.getByName("BREAK")) && island.hasPermission(superiorPlayer, IslandPrivilege.getByName("BUILD"));
+        return island.hasPermission(superiorPlayer, IslandPrivilege.getByName("BREAK"))
+                && island.hasPermission(superiorPlayer, IslandPrivilege.getByName("BUILD"));
     }
 
 }

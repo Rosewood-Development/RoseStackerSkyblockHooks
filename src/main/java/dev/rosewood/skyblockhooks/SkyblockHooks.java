@@ -1,6 +1,7 @@
 package dev.rosewood.skyblockhooks;
 
 import dev.rosewood.skyblockhooks.provider.BentoBoxProvider;
+import dev.rosewood.skyblockhooks.provider.IridiumSkyblockProvider;
 import dev.rosewood.skyblockhooks.provider.SkyblockProvider;
 import dev.rosewood.rosestacker.event.StackGUIOpenEvent;
 import dev.rosewood.skyblockhooks.provider.SuperiorSkyblockProvider;
@@ -29,6 +30,9 @@ public class SkyblockHooks extends JavaPlugin implements Listener {
             } else if (Bukkit.getPluginManager().isPluginEnabled("SuperiorSkyblock2")) {
                 this.provider = new SuperiorSkyblockProvider();
                 this.getLogger().info("Using SuperiorSkyblock2 as the Skyblock provider");
+            } else if (Bukkit.getPluginManager().isPluginEnabled("IridiumSkyblock")) {
+                this.provider = new IridiumSkyblockProvider();
+                this.getLogger().info("Using IridiumSkyblock as the Skyblock provider");
             }
 
             if (this.provider == null) {
