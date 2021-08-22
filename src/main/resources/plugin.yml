@@ -1,0 +1,5 @@
+name: SkyblockHooks
+main: dev.esophose.skyblockhooks.SkyblockHooks
+version: '1.0.0'
+api-version: '1.13'
+softdepend: [RoseStacker, BentoBox, BSkyBlock]
